@@ -1,0 +1,39 @@
+{
+  "name": "meetup-codemods",
+  "description": "Repo for code examples for TriangleReactJS Meetup",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dmiller9911/meetup-codemods.git",
+  "author": "Doug Miller <doug@dougmiller.io>",
+  "license": "MIT",
+  "private": true,
+  "keywords": [
+    "react",
+    "codemods",
+    "meetup"
+  ],
+  "scripts": {
+    "lint": "eslint .",
+    "precommit": "lint-staged",
+    "start": "mdx-deck ./slides/deck.mdx"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-plugin-prettier": "^2.6.2",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.2"
+  },
+  "dependencies": {
+    "babel-eslint": "^9.0.0",
+    "relative": "^3.0.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
+  }
+}
